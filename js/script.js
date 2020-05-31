@@ -18,15 +18,18 @@ const searchElements = (event, phrase) => {
     
     if(elements.length) {
         infoElement.innerHTML = `<h2 class="result__info">${elements.length} ${phrase} found.</h2>`;
+        showInfo(infoElement, elements);
     } else {
         infoElement.innerHTML = `<h2 class="result__info">No ${phrase} found.</h2>`;
         return;
     }
-    
+
 }
 
-const showInfo = () => {
-
+const showInfo = (infoElement, elements) => {
+    console.log(infoElement);
+    console.log(elements);
+    
 };
 
 const addForm = document.querySelector('.form--add');
